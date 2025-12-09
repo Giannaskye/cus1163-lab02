@@ -95,7 +95,7 @@ int show_system_info(void){
 		line_count++;
 
    }
-   fclose(fd);
+   
 	if(fclose(fd) == EOF)
 	{
 	perror(" fclose failed");
@@ -143,7 +143,7 @@ int read_file_with_syscalls(const char* filename) {
         perror("read failed");
         return -1;
 	}
-close(fd);
+
     if(close(fd) == -1){
 		perror("close failed");
 		}
@@ -165,10 +165,7 @@ int read_file_with_library(const char* filename) {
 {
 	 printf("%s", buffer);
 } 
-	fclose(pointer;
-	
-	if(fclose(pointer) == EOF)
-  {
+	if(fclose(pointer)== EOF){
 		perror(" fclose failed");
 		return -1;
 }
